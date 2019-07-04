@@ -1,11 +1,10 @@
 import React from 'react';
+import { View, TouchableWithoutFeedback, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
 import { Ionicons } from '@expo/vector-icons';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
 import styles from '../screens/styles/camera.styles.js';
-
-import { TouchableOpacity, TouchableOpacity, View } from 'react-native-gesture-handler';
 
 const { FlashMode: CameraFlashModes, Type: CameraTypes } = Camera.Constants;
 
