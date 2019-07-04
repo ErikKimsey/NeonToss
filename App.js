@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import { StyleSheet, Text, View } from 'react-native';
+import Landing from './screens/Landing';
+import Toss from './screens/Toss';
+
+const RootStack = createStackNavigator(
+	{
+		Home: Landing,
+		Toss: Toss
+	},
+	{
+		initialRouteName: 'Home'
+	}
+);
+
+const AppContainer = createAppContainer(RootStack);
 
 class App extends Component {
 	render() {
-		return (
-			<View style={styles.container}>
-				<Text>Open up App.js to start working on your app!</Text>
-			</View>
-		);
+		return <AppContainer />;
 	}
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center'
-	}
-});
-
-const AppNavigator = createStackNavigator({
-	Home: {
-		screen: App
-	}
-});
-
-export default createAppContainer(AppNavigator);
+export default App;
