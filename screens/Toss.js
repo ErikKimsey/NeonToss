@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
 import styles from './styles/camera.styles.js';
-// import Toolbar from './toolbar.component';
+import Toolbar from '../components/cameraToolbar';
 // import Gallery from './gallery.component';
 
 export default class Toss extends React.Component {
@@ -65,7 +65,7 @@ export default class Toss extends React.Component {
 
 				{/* {captures.length > 0 && <Gallery captures={captures} />} */}
 
-				{/* <Toolbar
+				<Toolbar
 					capturing={capturing}
 					flashMode={flashMode}
 					cameraType={cameraType}
@@ -75,7 +75,7 @@ export default class Toss extends React.Component {
 					onCaptureOut={this.handleCaptureOut}
 					onLongCapture={this.handleLongCapture}
 					onShortCapture={this.handleShortCapture}
-				/> */}
+				/>
 			</React.Fragment>
 		);
 	}
